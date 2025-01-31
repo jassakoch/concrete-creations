@@ -1,8 +1,9 @@
+import React from 'react';
 import Navbar from './components/Navbar'
 import './App.css'
 import './index.css'
 
-function App() {
+export default function App() {
 
 
   return (
@@ -13,4 +14,4 @@ function App() {
   )
 }
 
-export default App
+
