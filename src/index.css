@@ -12,16 +12,61 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  background-color: #f8f8f8;
+  background-color: #4f5d4f;
   border-bottom: 1px solid #ddd;
+  height: 60px;
 }
 
-navbar img {
-  border: 1px solid red;
+.navbar img {
+  height: 3.1cm;
+  max-width: 207px;
+  object-fit: contain;
+
 }
+
 
 .burger-menu {
   cursor: pointer;
   font-size: 24px;
 }
 
+.slider-container {
+  width: 100%;
+  height: 70vh;
+  overflow: hidden;
+  position: relative;
+  
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  
+}
+
+.slider img {
+  width: 100%;
+  height: 100%;
+  flex: 1 0 100%;
+  object-fit: contain;
+}
+
+button.prev, button.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+button.prev {
+  left: 10px;
+}
+
+button.next {
+  right: 10px;
+}
