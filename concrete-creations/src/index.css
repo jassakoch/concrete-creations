@@ -16,6 +16,10 @@
   border-bottom: 1px solid #ddd;
 }
 
+navbar img {
+  border: 1px solid red;
+}
+
 .burger-menu {
   cursor: pointer;
   font-size: 24px;
