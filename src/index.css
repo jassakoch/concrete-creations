@@ -32,23 +32,25 @@
 
 .slider-container {
   width: 100%;
-  height: 70vh;
+  height: auto;
   overflow: hidden;
   position: relative;
+  margin: 0;
   
 }
 
 .slider {
   display: flex;
   transition: transform 0.5s ease-in-out;
+ 
   
 }
 
 .slider img {
   width: 100%;
-  height: 100%;
+  height: auto;
   flex: 1 0 100%;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 button.prev, button.next {
@@ -69,4 +71,29 @@ button.prev {
 
 button.next {
   right: 10px;
+}
+
+.about-container {
+  font-family: 'Poppins', sans-serif;
+  padding: 20px;
+  margin: 10px 10px 10px 10px;
+}
+
+.get-estimate-btn {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  background-color: white;
+  color:  #4f5d4f;
+  border: 2px solid #4f5d4f;
+  padding: 10px 20px;
+  cursor: pointer;
+  height: 1.5cm; /* Ensure the button is at least 2 cm high */
+  font-size: 16px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+  margin: 0px 20px 25px 20px;
+}
+
+.get-estimate-btn:hover {
+  background-color: white;
 }
