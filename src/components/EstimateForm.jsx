@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
-import './Form.css'; // Import the CSS file for the form styles
+import '../Form.css'; // Import the CSS file for the form styles
 
 const EstimateForm = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    phone: '',
-    address: '',
-    info: ''
+    message: ''
   });
 
   const handleChange = (e) => {
@@ -21,28 +19,24 @@ const EstimateForm = () => {
   return (
     <div className="estimate-form-container">
       <h2>Get an Estimate</h2>
-      <form action="https://formspree.io/f/xnnjvbye" method="POST">
-        <label className="fs-label">
-          Name:
-          <input className="fs-input" type="text" name="name" value={formData.name} onChange={handleChange} required />
-        </label>
-        <label className="fs-label">
-          Email:
-          <input className="fs-input" type="email" name="email" value={formData.email} onChange={handleChange} required />
-        </label>
-        <label className="fs-label">
-          Phone:
-          <input className="fs-input" type="tel" name="phone" value={formData.phone} onChange={handleChange} required />
-        </label>
-        <label className="fs-label">
-          Address:
-          <input className="fs-input" type="text" name="address" value={formData.address} onChange={handleChange} required />
-        </label>
-        <label className="fs-label">
-          Additional Info:
-          <textarea className="fs-textarea" name="info" value={formData.info} onChange={handleChange} required />
-        </label>
-        <button className="fs-button" type="submit">Submit</button>
+      <form action="https://formspree.io/f/xnnjvbye" method="POST" className="fs-form" target="_top">
+        <div className="fs-field">
+          <label className="fs-label" htmlFor="name">Your Name</label>
+          <input className="fs-input" id="name" name="name" value={formData.name} onChange={handleChange} required />
+        </div>
+        <div className="fs-field">
+          <label className="fs-label" htmlFor="email">Email</label>
+          <input className="fs-input" id="email" name="email" value={formData.email} onChange={handleChange} required />
+          <p className="fs-description">This will help me respond to your query via an email.</p>
+        </div>
+        <div className="fs-field">
+          <label className="fs-label" htmlFor="message">Message</label>
+          <textarea className="fs-textarea" id="message" name="message" value={formData.message} onChange={handleChange} required></textarea>
+          <p className="fs-description">What would you like to discuss?</p>
+        </div>
+        <div className="fs-button-group">
+          <button className="fs-button" type="submit">Submit</button>
+        </div>
       </form>
     </div>
   );
