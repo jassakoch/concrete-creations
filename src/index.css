@@ -97,3 +97,14 @@ button.next {
 .get-estimate-btn:hover {
   background-color: white;
 }
+
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  .get-estimate-btn {
+    width: 50%; 
+    max-width: 250px;
+    padding: 15px; /* Increase padding for better touch targets */
+    font-size: 18px; /* Increase font size for readability */
+  }
+}
