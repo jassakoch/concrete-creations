@@ -71,6 +71,14 @@ textarea {
 
 /** Components **/
 
+.estimate-form-container {
+    padding: 15px; /* Add padding to the container */
+  }
+  
+  .form-title {
+    margin-bottom: 1.5rem; /* Add margin below the title */
+  }
+
 .fs-form {
   display: grid;
   row-gap: 1.5rem;
@@ -345,3 +353,20 @@ fieldset {
 .fs-textarea::placeholder {
   color: var(--color-text-muted);
 }
+
+@media (min-width: 600px) {
+    .estimate-form-container {
+      max-width: 600px; /* Set a maximum width for the container */
+      margin: 0 auto; /* Center the container */
+      padding: 30px; /* Increase padding for larger screens */
+    }
+  
+    .fs-input,
+    .fs-textarea {
+      width: 100%; /* Ensure input fields take full width of the container */
+    }
+  
+    .fs-textarea {
+      height: 150px; /* Set a fixed height for the textarea */
+    }
+  }
