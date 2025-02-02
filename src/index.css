@@ -15,6 +15,12 @@
   background-color: #4f5d4f;
   border-bottom: 1px solid #ddd;
   height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+ 
 }
 
 .navbar img {
@@ -155,6 +161,8 @@ button.next {
 .get-estimate-btn:hover {
   background-color: white;
 }
+
+
 
 
 /* Responsive styles */

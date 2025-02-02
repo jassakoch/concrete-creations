@@ -73,7 +73,19 @@ textarea {
 
 .estimate-form-container {
     padding: 15px; /* Add padding to the container */
+    margin-top: 80px;
+    z-index: 1;
+    position: relative;
+
   }
+
+
+@media (min-width: 1024px) {
+    .estimate-form-container {
+      margin-top: 100px !important;
+    }
+}
+  
   
   .form-title {
     margin-bottom: 1.5rem; /* Add margin below the title */
