@@ -24,11 +24,55 @@
 
 }
 
-
 .burger-menu {
-  cursor: pointer;
   font-size: 24px;
+  cursor: pointer;
+  display: none; /* Hide burger menu on larger screens */
 }
+
+.nav-links {
+  display: flex;
+  gap: 20px; /* Add spacing between links */
+  margin-right: 20px; /* Add margin to the right */
+}
+
+.nav-links a {
+  color: #ffd700; 
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+.nav-links.open {
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .burger-menu {
+    display: block; /* Show burger menu on smaller screens */
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 60px; /* Adjust top position to be below the navbar */
+    right: 20px;
+    background-color: #4f5d4f;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    color: yellow; /* Ensure font color is yellow on smaller screens */
+  }
+}
+
 
 .slider-container {
   width: 100%;
