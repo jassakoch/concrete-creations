@@ -174,3 +174,21 @@ button.next {
     font-size: 18px; /* Increase font size for readability */
   }
 }
+
+@media (min-width: 1024px) { 
+  .slider img {
+    width: 70%; /* Shrinks it to 70% of its original size */
+    max-width: 900px; /* Prevents it from being too large */
+    margin: 0 auto; /* Centers it */
+    display: block;
+  }
+}
+
+@media (min-width: 1024px) { 
+  .about-container {
+    max-width: 600px; /* Adjust width as needed */
+    margin: 0 auto; /* Centers the content */
+    text-align: left;
+  }
+}
+
