@@ -53,25 +53,39 @@
   }
 
   .nav-links {
-    display: none;
+    display: flex;  /* Set as flex so it can be toggled */
     flex-direction: column;
+    align-items: flex-start;
     gap: 10px;
     position: absolute;
-    top: 60px; /* Adjust top position to be below the navbar */
+    top: 60px;
     right: 20px;
     background-color: #4f5d4f;
     padding: 10px;
     border-radius: 5px;
+    z-index: 999;
+    visibility: hidden; /* Instead of display: none */
+    opacity: 0;
+    transform: translateY(-10px); /* Subtle effect */
+    transition: visibility 0s linear 0.2s, opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
   }
 
   .nav-links.open {
-    display: flex;
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0s;
   }
 
-  .nav-links a {
-    color: yellow; /* Ensure font color is yellow on smaller screens */
+  .nav-links a { 
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    text-align: left;
+    
   }
 }
+
 
 
 .slider-container {
