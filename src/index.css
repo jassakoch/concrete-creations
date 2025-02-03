@@ -151,7 +151,7 @@ button.next {
   border: 2px solid #4f5d4f;
   padding: 10px 20px;
   cursor: pointer;
-  height: 1.5cm; /* Ensure the button is at least 2 cm high */
+  height: 1.5cm; 
   font-size: 16px;
   border-radius: 10px;
   transition: background-color 0.3s ease;
@@ -170,24 +170,23 @@ button.next {
   .get-estimate-btn {
     width: 50%; 
     max-width: 250px;
-    padding: 15px; /* Increase padding for better touch targets */
-    font-size: 18px; /* Increase font size for readability */
+    padding: 15px; 
+    font-size: 18px; 
   }
 }
 
 @media (min-width: 1024px) { 
   .slider img {
-    width: 70%; /* Shrinks it to 70% of its original size */
-    max-width: 900px; /* Prevents it from being too large */
-    margin: 0 auto; /* Centers it */
+    width: 70%; 
+    max-width: 900px; 
+    margin: 0 auto;
     display: block;
   }
 }
 
 @media (min-width: 1024px) { 
   .about-container {
-    max-width: 600px; /* Adjust width as needed */
-    /* margin: 0 auto; Centers the content */
+    max-width: 600px; 
     text-align: left;
   }
 }
