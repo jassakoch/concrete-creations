@@ -389,6 +389,7 @@ fieldset {
       max-width: 600px; /* Set a maximum width for the container */
       margin: 0 auto; /* Center the container */
       padding: 30px; /* Increase padding for larger screens */
+      margin-top: 15px;
     }
   
     .fs-input,
@@ -399,4 +400,8 @@ fieldset {
     .fs-textarea {
       height: 150px; /* Set a fixed height for the textarea */
     }
+
+    .contact-phone {
+        margin-top: 0px; /* Ensure phone number stays visible without scrolling */
+      }
   }
