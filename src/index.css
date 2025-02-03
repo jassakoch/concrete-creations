@@ -187,7 +187,7 @@ button.next {
 @media (min-width: 1024px) { 
   .about-container {
     max-width: 600px; /* Adjust width as needed */
-    margin: 0 auto; /* Centers the content */
+    /* margin: 0 auto; Centers the content */
     text-align: left;
   }
 }

@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import '../index.css';
 
 const images = [
     '/images/iStock-1266573569.jpg',
@@ -10,29 +11,47 @@ const images = [
 
 const ImagesSlider = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [isTransitioning, setIsTransitioning] = useState(false);
+
+    // Duplicate the first image at the end for seamless looping
+    const sliderImages = [...images, images[0]];
 
     const handleNext = () => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+        if (isTransitioning) return; // Prevent multiple clicks during transition
+        setIsTransitioning(true);
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % sliderImages.length);
     };
 
     const handlePrev = () => {
-        setCurrentIndex((prevIndex) => 
-            prevIndex === 0 ? images.length - 1 : prevIndex - 1
+        if (isTransitioning) return; // Prevent multiple clicks during transition
+        setIsTransitioning(true);
+        setCurrentIndex((prevIndex) =>
+            prevIndex === 0 ? sliderImages.length - 1 : prevIndex - 1
         );
     };
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            handleNext();
-        }, 3000); // Auto-slide every 3 seconds
+    const handleTransitionEnd = () => {
+        setIsTransitioning(false);
 
-        return () => clearInterval(interval);
-    }, []);
+        // If we're at the last image (the duplicated one), reset to the first image without animation
+        if (currentIndex === sliderImages.length - 1) {
+            setTimeout(() => {
+                setCurrentIndex(0);
+            }, 0); // Reset immediately after transition ends
+        }
+    };
 
     return (
         <div className="slider-container">
-            <div className="slider" style={{ transform: `translateX(-${currentIndex * 100}%)`, transition: "transform 0.5s ease-in-out" }}>
-                {images.concat(images[0]).map((src, index) => ( // Duplicates first image for seamless loop effect
+            <div
+                className="slider"
+                style={{
+                    transform: `translateX(-${currentIndex * 100}%)`,
+                    transition: isTransitioning ? 'transform 0.5s ease-in-out' : 'none',
+                }}
+                onTransitionEnd={handleTransitionEnd}
+            >
+                {sliderImages.map((src, index) => (
                     <img key={index} src={src} alt={`Slide ${index + 1}`} />
                 ))}
             </div>
