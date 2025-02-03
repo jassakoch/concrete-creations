@@ -100,12 +100,14 @@
   overflow: hidden;
   position: relative;
   margin: 0;
+  max-width: 100%;
   
 }
 
 .slider {
   display: flex;
   transition: transform 0.5s ease-in-out;
+  width: 100%;
  
   
 }
@@ -113,7 +115,9 @@
 .slider img {
   width: 100%;
   height: auto;
-  flex: 1 0 100%;
+  /* flex: 1 0 100%; */
+  flex-shrink: 0; /* Prevent images from shrinking */
+
   object-fit: cover;
 }
 

@@ -37,6 +37,10 @@ const EstimateForm = () => {
         <div className="fs-button-group">
           <button className="fs-button" type="submit">Submit</button>
         </div>
+        <div className="contact-phone">
+          <span>Call or Text: </span>
+          <a href="tel:+15195038768">+1 (519) 503-8768</a>
+        </div>
       </form>
     </div>
   );
