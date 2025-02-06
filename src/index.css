@@ -105,7 +105,7 @@
   overflow: hidden;
   position: relative;
   margin: 0;
-  max-width: 100%;
+  /* max-width: 100%; */
 
 }
 
@@ -114,16 +114,15 @@
   transition: transform 0.5s ease-in-out;
   width: 100%;
 
-
 }
 
 .slider img {
   width: 100%;
-  height: auto;
+  height: 100%;
   /* flex: 1 0 100%; */
   flex-shrink: 0;
   /* Prevent images from shrinking */
-  object-fit: cover;
+  object-fit: contain;
 }
 
 button.prev,
@@ -188,19 +187,33 @@ button.next {
 @media (min-width: 1024px) {
 
   .slider-container {
-    max-height: 20%;
+    
+    height: auto;
+    overflow: visible !important;
+    position: static !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
   }
+
   .slider img {
     width: 100%;
+    height: auto;
     /* max-width: 900px; */
     margin: 0 auto;
-    display: block;
+    /* display: block; */
+    object-fit: contain;
   }
 }
 
 @media (min-width: 1024px) {
-  .about-container {
+  .about-container, .get-estimate-btn {
     max-width: 600px;
     text-align: left;
+    position: relative;
+    /* z-index: 10; */
+    margin-top: 20px;
   }
 }
