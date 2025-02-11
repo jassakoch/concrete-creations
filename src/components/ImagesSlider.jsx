@@ -41,7 +41,7 @@ const ImagesSlider = () => {
         onTransitionEnd={handleTransitionEnd}
       >
         {images.map((src, index) => (
-          <img key={index} src={src} alt={`Concrete Countertop ${index + 1}`} />
+          <img key={index} src={src} alt={`Concrete Countertop in Kitchener, Waterloo, Cambridge ${index + 1}`} />
         ))}
       </div>
       <button className="prev" onClick={handlePrev}>❮</button>
