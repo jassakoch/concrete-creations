@@ -170,17 +170,20 @@ button.next {
 .get-estimate-btn:hover {
   background-color: white;
 }
+
 .FYI-container {
-  margin-top: 80px; /* Adjust based on your navbar height */
+  margin-top: 80px;
   padding: 20px;
   max-width: 90%;
 }
 
 .FYI-container h1 {
-  margin-bottom: 15px;;
+  margin-bottom: 15px;
+  ;
 }
+
 .FYI-container h2 {
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
 }
 
 .FYI-container p {
@@ -198,40 +201,27 @@ button.next {
 }
 
 @media (min-width: 1024px) {
-
-  .slider-container {
-    
-    height: auto;
-    overflow: visible !important;
-    position: static !important;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-
-  }
-
-  .slider img {
-    width: 100%;
-    height: auto;
-    /* max-width: 900px; */
-    margin: 0 auto;
-    /* display: block; */
-    object-fit: contain;
-  }
-}
-
-@media (min-width: 1024px) {
-  .about-container, .get-estimate-btn {
+  .about-container,
+  .get-estimate-btn {
     max-width: 600px;
     text-align: left;
     position: relative;
-    /* z-index: 10; */
     margin-top: 20px;
   }
 
+  .slider-container {
+    height: 70vh; /* Adjust this value to control the height of the slider */
+    display: flex;
+  }
+
+  .slider img {
+    height: 100%; /* Ensure images take full height of the container */
+    object-fit: cover; /* Ensure images are not cropped */
+  }
+
   .FYI-container {
-    max-width: 70ch;
     margin: 70px auto 0;
+    max-width: 70ch;
+
   }
 }
