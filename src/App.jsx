@@ -4,6 +4,7 @@ import About from './components/About'
 import './Form.css'
 import './index.css'
 import ImagesSlider from './components/ImagesSlider';
+import FYI from './components/FYI';
 
 export default function App() {
 

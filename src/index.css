@@ -170,9 +170,22 @@ button.next {
 .get-estimate-btn:hover {
   background-color: white;
 }
+.FYI-container {
+  margin-top: 80px; /* Adjust based on your navbar height */
+  padding: 20px;
+  max-width: 90%;
+}
 
+.FYI-container h1 {
+  margin-bottom: 15px;;
+}
+.FYI-container h2 {
+  margin-bottom: 20px; 
+}
 
-
+.FYI-container p {
+  margin-bottom: 10px;
+}
 
 /* Responsive styles */
 @media (max-width: 600px) {
@@ -215,5 +228,10 @@ button.next {
     position: relative;
     /* z-index: 10; */
     margin-top: 20px;
+  }
+
+  .FYI-container {
+    max-width: 70ch;
+    margin: 70px auto 0;
   }
 }

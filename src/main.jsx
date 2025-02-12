@@ -5,7 +5,8 @@ import './index.css';
 import './Form.css';
 import App from './App.jsx';
 import EstimateForm from './components/EstimateForm.jsx';
-import Navbar from './components/Navbar';  // ✅ Import Navbar here
+import Navbar from './components/Navbar';  
+import FYI from './components/FYI.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -14,6 +15,7 @@ createRoot(document.getElementById('root')).render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/estimate" element={<EstimateForm />} />
+        <Route path="/fyi" element={<FYI />} /> 
       </Routes>
     </Router>
   </StrictMode>
